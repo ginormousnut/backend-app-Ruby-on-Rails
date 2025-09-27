@@ -1,24 +1,47 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Patients Doctors App
 
-Things you may want to cover:
+Backend application built with Ruby on Rails for managing patients and doctors with BMR and BMI calculations.  
 
-* Ruby version
+## Features:
 
-* System dependencies
+- CRUD for patients and doctors
+- Many-to-many relationship between patients and doctors
+- Filtering and pagination for patient lists
+- BMR calculation using formulas: Mifflin–St. Jeor and Harris–Benedict
+- BMR calculation history
+- BMI calculation via external API
+- Containerized with Docker Compose + PostgreSQL
 
-* Configuration
+---
+## Ruby Version
 
-* Database creation
+ruby 3.4.5
 
-* Database initialization
+---
 
-* How to run the test suite
+## System Dependencies
 
-* Services (job queues, cache servers, search engines, etc.)
+- Docker
+- Docker Compose
+- PostgreSQL (15) — runs in Docker container
 
-* Deployment instructions
+---
 
-* ...
+## Configuration
+
+- Database settings are configured via `docker-compose.yml`.
+
+---
+## Quick Start
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/ginormousnut/backend-app-Ruby-on-Rails.git
+cd backend-app-Ruby-on-Rails
+```
+### 2. Run command line
+```bash
+docker-compose -f docker-compose.yml up -d
+```
